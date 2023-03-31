@@ -1,28 +1,14 @@
-import "./App.css";
-import About from "./Components/About";
-import Header from "./Components/Header";
-import Hero from "./Components/Hero";
-import Project from "./Components/Project";
-import Services from "./Components/Services";
-import Testimonial from "./Components/Testimonial";
-import TopHeader from "./Components/TopHeader";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Landing from "./pages/Landing";
 
-function App() {
+const App = () => {
   return (
-    <div>
-      <header>
-        <TopHeader />
-        <Header />
-      </header>
-      <main>
-        <Hero />
-        <Services />
-        <About />
-        <Project />
-        <Testimonial />
-      </main>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
